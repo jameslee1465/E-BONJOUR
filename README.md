@@ -1,3 +1,4 @@
 # E-BONJOUR
 
-Web demo:https://github.com/jameslee1465/E-BONJOUR
+Web demo:
+https://jameslee1465.github.io/E-BONJOUR/
