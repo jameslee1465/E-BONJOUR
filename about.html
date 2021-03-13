@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="zh-TW">
+  <head>
+    <link rel="icon" href="./img/logo1.png" type="image/x-icon">
+    <link href="css/modal.css" rel="stylesheet" type="text/css">
+    <link href="css/style2.css" rel=stylesheet type="text/css">
+    <meta charset="UTF-8">
+	  <!-- 手機版縮放 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" >
+    
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    
+    <title>Bonjour! 朋廚</title>
+  </head>
+  <body class="bg body">
+    <header class="header">
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #AD5A5A">
+        <a class="navbar-brand" href="index.html"><img src="img/logo3.png" alt=""></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item"><a class="nav-link" href="index.html#section1">最新消息</a></li>
+              <li class="nav-item"><a class="nav-link" href="about.html">關於我們</a></li>
+              <li class="nav-item"><a class="nav-link" href="menu.html">精選商品</a></li>
+              <li class="nav-item"><a class="nav-link" id="modalBtn">會員註冊/登入</a></li>
+              <li class="nav-item"><a class="nav-link" href="https://www.facebook.com/bonjour1999/">聯繫我們</a></li>
+            </ul>
+          </div>
+      </nav>
+    </header>
+    <div id="myModal" class="modal">
+    <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2 class="modal-header-text"></h2>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="email">E-Mail Address</label>
+                    <input id="email" type="email" class="form-control" name="email" value="" required autofocus>
+                    <div class="invalid-feedback">
+                        Email is invalid
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input id="password" type="password" class="form-control" name="password" required data-eye>
+                    <div class="invalid-feedback">
+                        Password is required
+                    </div>
+                </div>
+                <div class="form-group m-0">
+                    <button type="submit" class="btn btn-primary btn-block" id="loginBtn">
+                        登入
+                    </button>
+                    <button type="submit" class="btn btn-primary btn-block" id="registerBtn">
+                        註冊
+                    </button>
+                    <button type="submit" class="btn btn-primary btn-block" id="logOutBtn">
+                        登出
+                    </button>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <h3 id="loginFail"></h3>
+            </div>
+        </div>
+    </div>
+    <div class="top_content">
+      <div class="row">
+        <div class="col-md-12">
+          <img src="./img/1.jpeg" class="img_1">
+          <div class="top_text">
+            <p class="top_text1">1999 ~ 2020</p>
+            <div class="seperation"></div>
+            <p class="top_text2">Bonjour Bakery</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="rect">  
+      <div class="horizon"></div>
+      <div class="about_box">
+        <p class="about">ABOUT US</p>
+      </div>
+      <div class="horizon2"></div>
+    </div>
+    
+    <div class="mid_content">
+      
+      <div class="row">
+        <div class="col-md-12">
+          <img src="./img/2.jpg" class="img_2">
+          <div class="img2_text">
+            <span class="title1_text">~每一刻都是品味的好時機~</span>
+            <p class="text1">職人烘焙坊專門店，秉持著用心地做出好西點的理念，實現了不受時地限制的味覺體驗，提供消費者特選的精緻休閒食品，
+              一段跨越心靈疆界的旋律,一份陪伴您24小時的香醇滋味。生活不該有界限，
+              來自烘焙師傅自由不受限的創作，跨越過往思維，設計出多種獨具特色又美味可口的西點。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom_content">
+      <div class="row bottom1">
+          
+        <div class="col-lg-6" style="padding: 0;">
+            <img src="./img/3.jpg" class="img_3">
+        </div>
+        <div class="col-lg-6" style="padding: 0;">
+            <div class="img3_box_text">
+              <span class="title2_text">創業理念</span>
+              <p class="text2">台北烘焙坊滿街都是，但 Bon appétit 麥香中，藏著我們認真手作與用心的溫度。<br><br>
+  
+                做麵包要用心，對朋廚來說，就是把麵包從秤料的麵粉開始，就把它都做是一個新生命般的呵護、照料。我們常常會對著麵團說話，希望它們好好麵團發酵長大，烘烤出美味的麵包，一直以來朋廚致力推動烘焙文化，讓麵包不只是好吃，而是能品嚐創作者用心製作所傳達的麵包魂！<br><br>
+                我們的產品皆遵循歐、美、日正統技術製成。無論選材、攪拌、整形、麵團發酵、烘焙......等每一階段的製作過程，無一不是為了提供您最好的品質與口感。
+              </p>
+            </div>
+        </div>
+      
+    </div>
+    <div class="row bottom2">
+        <div class="col-lg-6" style="padding: 0;">
+          <img src="./img/4.jpg" class="img_4">
+        </div>  
+        <div class="col-lg-6" style="padding: 0;">
+          <div class="img4_box_text">
+            <span class="title3_text">品牌堅持</span>
+            <p class="text3">朋廚期待從每一天的第一聲問候開始，提供您全天候的西點烘焙文化。我們的產品皆遵循歐美日正統的技術製成；無論是選材、攪拌、整形、發酵與烘焙...無一不是為了提供您最好的品質與口感，而一個步驟一個步驟的細心製作。為了您的健康，以最自然的技術與原料，提供您最自然健康的美味。<br><br>
+  
+                我們的工作態度是開心主動參與；用心於所經手的任何工作，相信它完成它；是關心所有的事物。幸福是相信夢想並努力實踐的人，才值得擁有的，朋廚是一群像朋友充滿熱情及相互扶持的我們所組成。<br><br>
+                我們師傅曾遠赴法國巴黎 LENÔTRE 麵包學校、瑞士琉森麵包學校，以及日本東京製菓學校，學習正統烘焙技術，每一個步驟的細心製作，是以貼近、領略現地的文化，帶給您國際化的視野與口感。
+            </p>
+          </div>
+         </div>
+    </div>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <p> &copy; Bonjour朋廚 All right reserved</p>
+          </div>
+          <div class="col-md-4">
+          </div>
+          <div class="col-md-2">
+            <a href='https://www.instagram.com/bonjourmylife/?hl=zh-tw'> <img src='img/ig.png'></a>
+            <a href='https://www.facebook.com/bonjour1999/'> <img src='img/fb.png'></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-storage.js"></script>
+    <script>
+      var firebaseConfig = {
+        apiKey: "AIzaSyBjuhnFu1zzWGRsSwKXh-bZiQzsRiUD18c",
+        authDomain: "htmlfinal-e0d6e.firebaseapp.com",
+        databaseURL: "https://htmlfinal-e0d6e.firebaseio.com",
+        projectId: "htmlfinal-e0d6e",
+        storageBucket: "htmlfinal-e0d6e.appspot.com",
+        messagingSenderId: "53668605105",
+        appId: "1:53668605105:web:a0e168d76ad9e73666c690",
+        measurementId: "G-LHK89WKWWZ"
+      };
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
+    <script src="js/modal.js"></script>
+    <script src="js/jQuery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/all.js"></script>
+  </body>
+</html>
+
+
+
+
+

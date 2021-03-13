@@ -1,0 +1,324 @@
+
+body{
+    background-color: #f5f0db;
+    font-family:  Arial, "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "Microsoft JhengHei", "맑은 고딕", sans-serif;
+    margin: auto
+}
+.header{
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 72px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    background-size: cover;
+    background-color:#AD5A5A;
+    z-index: 10;
+    padding: 0.1%;
+  }
+
+.title{
+    width: 60%;
+  }
+.title_img{
+    width: 130%;
+    max-width: 270px;
+    margin-top: 1.5%;
+    margin-left: 15%;
+}
+.header_right{
+    min-width: 20%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+}
+
+.nav{
+    margin-top: 8px;
+}
+
+.nav_box{
+    margin-right: 200px;
+    padding: 0px;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    border-radius: 3px;
+}
+.nav_item{
+    list-style: none;
+}
+.nav_item_link{
+    display: block;
+    text-decoration: none;
+    font-family: Arial, "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "Microsoft JhengHei", "맑은 고딕", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 16px 20px;
+    letter-spacing: normal;
+    text-align: left;
+    color: #edf2c5;
+}
+.nav_item:hover{
+      background-color: firebrick;
+}
+.align-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.showPic{
+    width: 100%;
+    max-height: 1080px;
+    min-height: 400px;
+}
+.slider_container {
+    width: 100%;
+    max-height: 1080px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: white;
+
+}
+.top_img{
+    width:100%;
+}
+.slider_container div {
+    position: absolute;
+    top: 73px;
+    left: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.slider_container div {
+    -webkit-animation: round 25s linear infinite;
+            animation: round 25s linear infinite;
+}
+
+@-webkit-keyframes round {
+    4% {
+        opacity: 1;
+        filter: alpha(opacity=100);
+        /* 0 - 1秒 淡入*/
+    }
+    20% {
+        opacity: 1;
+        filter: alpha(opacity=100);
+        /* 1- 5秒靜止*/
+    }
+    24% {
+        opacity: 0;
+        filter: alpha(opacity=0);
+        /* 5-6秒淡出*/
+    }
+}
+@keyframes round {
+    4% {
+        opacity: 1;
+        filter: alpha(opacity=100);
+        /* 0 - 1秒 淡入*/
+    }
+    20% {
+        opacity: 1;
+        filter: alpha(opacity=100);
+        /* 1- 5秒靜止*/
+    }
+    24% {
+        opacity: 0;
+        filter: alpha(opacity=0);
+        /* 5-6秒淡出*/
+    }
+}
+
+.slider_container div:nth-child(5) {
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+}
+
+.slider_container div:nth-child(4) {
+    -webkit-animation-delay: 5s;
+            animation-delay: 5s;
+}
+
+.slider_container div:nth-child(3) {
+    -webkit-animation-delay: 10s;
+            animation-delay: 10s;
+}
+
+.slider_container div:nth-child(2) {
+    -webkit-animation-delay: 15s;
+            animation-delay: 15s;
+}
+
+.slider_container div:nth-child(1) {
+    -webkit-animation-delay: 20s;
+            animation-delay: 20s;
+}
+/*.slider_container span {    
+    color: #000;
+    background: #fff;
+    position: absolute;
+    left: 0%;
+    top: 280px;
+    width: 400px;
+    height: 100px;
+    font-size: 30px;
+    text-align: center;
+    line-height: 100px;
+    -webkit-transform:scaleY(0);
+        -ms-transform:scaleY(0);
+            transform:scaleY(0);
+    -webkit-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;
+}
+
+.slider_container:hover span {
+    width: 100%;
+    -webkit-transform:scaleY(1);
+        -ms-transform:scaleY(1);
+            transform:scaleY(1);
+}
+
+.slider_container:hover div {
+    -webkit-animation-play-state: paused;
+            animation-play-state: paused;
+}*/
+.top_content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 50%;
+    top: 72px;
+    left: 0px;
+    justify-content: flex-start;
+    align-items: center;
+    padding-bottom: 0%;
+  }
+.img_1{
+    width: auto;
+    position: relative;
+    min-width: 1520px;
+    max-height: 300px;
+}
+.top_text{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 35px;
+
+}
+.top_text1{
+    font-weight: bold;
+    margin-top: 35%;
+    margin-bottom: 0;
+    font-size: 15px;
+    line-height: 0px;
+    color: rgba(255, 255, 255, 0.5);
+}
+.seperation{
+    width: 240px;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.5);;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+.top_text2{
+    font-weight: 500;
+    margin-top: 5%;
+    margin-bottom: 0;
+    font-size: 28px;
+    line-height: 0px;
+    color: white;
+}
+.slogan{
+    padding-top: 70%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.topSales{
+    margin-top: 5%;
+}
+.grid-style{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.box{
+    background-color: #FFFFFF;
+    width: 33% ;
+    min-height: 650px ;
+    display: flex;
+    flex-direction: column;
+}
+
+.salesPic{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.content{
+    padding-top:40px;
+}
+
+.content footer{
+    margin-top: 50px;
+}
+
+.seperation{
+    width: 50%;
+    min-width: 150px;
+    height:1px;
+    background-color:#3C3C3C;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+.button{
+    box-shadow: inset 0 0 0 2px rgba(0,0,0,0.15);
+    width:150px;
+    height: 50px;
+    line-height:50px;
+    text-align: center;
+    vertical-align: ce;
+    color: #272727 !important
+}
+.button:hover{
+    background-color: #f8f8d9;
+}
+#footer{
+    background-color: #272727;
+    width: 100%;
+    height: 150px;
+    margin-top: 100px;
+}
+.icon{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+    min-width:30px;
+    width: auto;
+}
+.imgicon{
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 30px;
+    max-height: 30px;
+}
+.copyright{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:white;   
+}

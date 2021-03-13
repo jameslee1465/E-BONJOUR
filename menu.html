@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <link href="css/modal.css" rel="stylesheet" type="text/css">
+	<link href="css/style3.css" rel="stylesheet">	
+	<!-- 手機版縮放 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1" >
+	<title>Bonjour朋廚</title>
+	<!-- css連結 -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+	<!-- nav bar -->
+	<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #AD5A5A">
+		<a class="navbar-brand" href="index.html"><img src="img/logo3.png" alt=""></a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			  <span class="navbar-toggler-icon"></span>
+		  </button>
+		
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item"><a class="nav-link" href="index.html#section1">最新消息</a></li>
+				<li class="nav-item"><a class="nav-link" href="about.html">關於我們</a></li>
+                <li class="nav-item"><a class="nav-link" href="menu.html">精選商品</a></li>
+                <li class="nav-item"><a class="nav-link" id="modalBtn">會員註冊/登入</a></li>
+				<li class="nav-item"><a class="nav-link" href="https://www.facebook.com/bonjour1999/">聯繫我們</a></li>
+			</ul>
+		</div>
+    </nav>
+    <div id="myModal" class="modal">
+    <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2 class="modal-header-text"></h2>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="email">E-Mail Address</label>
+                    <input id="email" type="email" class="form-control" name="email" value="" required autofocus>
+                    <div class="invalid-feedback">
+                        Email is invalid
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input id="password" type="password" class="form-control" name="password" required data-eye>
+                    <div class="invalid-feedback">
+                        Password is required
+                    </div>
+                </div>
+                <div class="form-group m-0">
+                    <button type="submit" class="btn btn-primary btn-block" id="loginBtn">
+                        登入
+                    </button>
+                    <button type="submit" class="btn btn-primary btn-block" id="registerBtn">
+                        註冊
+                    </button>
+                    <button type="submit" class="btn btn-primary btn-block" id="logOutBtn">
+                        登出
+                    </button>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <h3 id="loginFail"></h3>
+            </div>
+        </div>
+    </div>
+    <div class="bg">	
+    <div class="starter">
+        <header style="margin-top: 100px;">
+            <h2>各式產品</h2>
+            <p>甜點給人喜悅，一口讓您沉醉</p>
+        </header>
+        <div class="blackline">
+        </div>
+    </div>
+    <div class="flex"style="margin:100px">
+        <div class="cakebox">
+            <div style="text-align:center;">
+                <a>
+                    <img src="img/tarocake.png" class="imagesize">
+                </a>
+                <h2>芋頭布丁蛋糕</h2>
+                <div class="price_text">
+                    <b>優惠價NT$ 320</b>
+                </div>	
+            </div>
+            <div>
+                <p>嚴選在地花蓮吉安芋頭。<br>
+                內層夾餡芋頭、牛奶布丁，讓口感更滑順。<br><br>
+                與法國進口依思妮(isigny)鮮乳脂，<br>交織出多層次的味蕾享受。</p>
+                
+                <ul class="btn-numbox">
+                    <li><span class="number">數量</span></li>
+                    <li>
+                        <ul class="count">
+                            <li><span id="num-jian" class="num-jian">-</span></li>
+                            <li><input type="text" class="input-num" id="input-num" value="0" /></li>
+                            <li><span id="num-jia" class="num-jia">+</span></li>
+                        </ul>
+                    </li>
+                </ul>
+                
+            </div>
+        </div>
+        <div class="cakebox">
+            <div style="text-align:center;">
+                <a>
+                    <img src="img/stbr.png" class="imagesize">
+                </a>
+                <h2>草莓布朗尼蛋糕</h2>
+                <div class="price_text">
+                    <b>優惠價NT$ 250</b>
+                </div>	
+            </div>
+            <div>
+                <p>雙層爆漿夾餡<br>
+                    由法國進口依思妮(isigny)鮮奶油與<br>
+                    美國草莓水果餡<br><br>
+                    巧克力蛋糕夾層由<br>
+                    Barry Callebaut 60% 調溫巧克力製作</p>
+                <ul class="btn-numbox">
+                    <li><span class="number">數量</span></li>
+                    <li>
+                        <ul class="count">
+                            <li><span id="num-jian2" class="num-jian">-</span></li>
+                            <li><input type="text" class="input-num" id="input-num2" value="0" /></li>
+                            <li><span id="num-jia2" class="num-jia">+</span></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="cakebox">
+            <div style="text-align:center;">
+                <a>
+                    <img src="img/marb.png" class="imagesize">
+                </a>
+                <h2>抹茶紅豆麻吉蛋糕</h2>
+                <div class="price_text">
+                    <b>優惠價NT$ 280</b>
+                </div>	
+            </div>
+            <div>
+                <p>抹茶鮮奶慕思，茶香濃郁，入口即化。<br>
+                法國進口依思妮(isigny)鮮奶油<br>
+                配上QQ原味麻糬。<br>
+                搭配嚴選，台灣紅豆顆粒餡。<br>
+                茶香味十足的抹茶海綿蛋糕。</p>
+                <ul class="btn-numbox">
+                    <li><span class="number">數量</span></li>
+                    <li>
+                        <ul class="count">
+                            <li><span id="num-jian3" class="num-jian">-</span></li>
+                            <li><input type="text" class="input-num" id="input-num3" value="0" /></li>
+                            <li><span id="num-jia3" class="num-jia">+</span></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="cakebox">
+            <div style="text-align:center;">
+                <a>
+                    <img src="img/bacho.png" class="imagesize">
+                </a>
+                <h2>香蕉巧克力布朗尼</h2>
+                <div class="price_text">
+                    <b>優惠價NT$ 250</b>
+                </div>	
+            </div>
+            <div>
+                <p>百樂嘉利寶(Barry Callebaut)巧克力與<br>
+                進口天然奶油，<br>
+                打造出完美的布朗尼蛋糕體，<br>
+                襯托新鮮香蕉果粒與<br>
+                法國鮮乳脂，濃郁不失清新，<br>
+                獨特不失和諧的 脫俗感受。</p>
+                <ul class="btn-numbox">
+                    <li><span class="number">數量</span></li>
+                    <li>
+                        <ul class="count">
+                            <li><span id="num-jian4" class="num-jian">-</span></li>
+                            <li><input type="text" class="input-num" id="input-num4" value="0" /></li>
+                            <li><span id="num-jia4" class="num-jia">+</span></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="cakebox">
+            <div style="text-align:center;">
+                <a>
+                    <img src="img/cho.png" class="imagesize">
+                </a>
+                <h2>黑森林蛋糕</h2>
+                <div class="price_text">
+                    <b>優惠價NT$ 320</b>
+                </div>
+            </div>
+            <div>
+                <p>嚴選法國進口鮮奶油製作。<br>
+                完美雙夾餡設計，採法國進口黑櫻桃<br>
+                吃出甜蜜的口感。<br>
+                60%瑞士百樂嘉利寶( Barry Callebaut)<br>
+                黑巧克力製成蛋糕主體與巧克力甘那許。</p>
+                <ul class="btn-numbox">
+                    <li><span class="number">數量</span></li>
+                    <li>
+                        <ul class="count">
+                            <li><span id="num-jian5" class="num-jian">-</span></li>
+                            <li><input type="text" class="input-num" id="input-num5" value="0" /></li>
+                            <li><span id="num-jia5" class="num-jia">+</span></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="cakebox">
+            <div style="text-align:center;">
+                <a>
+                    <img src="img/mare.jpg" class="imagesize">
+                </a>
+                <h2>瑪爾蛋糕</h2>
+                <div class="price_text">
+                    <b>優惠價NT$ 240</b>
+                </div>	
+            </div>
+            <div>
+                <p>採用美國EFCO精製的藍莓內餡，
+                美式風味獨具特色，酸甜濃度恰到好處<br>
+                柔軟細緻巧克力蛋糕與香濃巧克力，<br>
+                以甘那修淋醬式澆淋於蛋糕上，<br>
+                三者融合出多層次口感 ，<br>
+                讓您意猶未盡、回味無窮。</p>
+                <ul class="btn-numbox">
+                    <li><span class="number">數量</span></li>
+                    <li>
+                        <ul class="count">
+                            <li><span id="num-jian6" class="num-jian">-</span></li>
+                            <li><input type="text" class="input-num" id="input-num6" value="0" /></li>
+                            <li><span id="num-jia6" class="num-jia">+</span></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="cakebox">
+            <div style="text-align:center;">
+                <a>
+                    <img src="img/roch.jpg" class="imagesize">
+                </a>
+                <h2>金莎榛果巧克力</h2>
+                <div class="price_text">
+                    <b>優惠價NT$ 320</b>
+                </div>	
+            </div>
+            <div>
+                <p>精選知名<br>
+                百樂嘉利寶(Barry Callebaut）烘製巧克力，<br><br>
+                醇厚可可搭配美國杏仁和榛果果粒，<br>
+                淋上源自義大利榛果巧克力醬。<br></p>
+                <ul class="btn-numbox">
+                    <li><span class="number">數量</span></li>
+                    <li>
+                        <ul class="count">
+                            <li><span id="num-jian7" class="num-jian">-</span></li>
+                            <li><input type="text" class="input-num" id="input-num7" value="0" /></li>
+                            <li><span id="num-jia7" class="num-jia">+</span></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="cakebox">
+            <div style="text-align:center;">
+                <a>
+                    <img src="img/lecho.jpg" class="imagesize">
+                </a>
+                <h2>檸檬巧克力蛋糕</h2>
+                <div class="price_text">
+                    <b>優惠價NT$ 240</b>
+                </div>	
+            </div>
+            <div>
+                <p>表層披覆檸檬巧克力與<br>
+                法國進口依思妮(isigny)鮮乳脂，<br>
+                交織出迷人的風味。<br>
+                內餡使用新鮮檸檬原汁與進口天然奶油，<br>
+                熬煮出濃郁芳香的內層夾餡。</p>
+                <ul class="btn-numbox">
+                    <li><span class="number">數量</span></li>
+                    <li>
+                        <ul class="count">
+                            <li><span id="num-jian8" class="num-jian">-</span></li>
+                            <li><input type="text" class="input-num" id="input-num8" value="0" /></li>
+                            <li><span id="num-jia8" class="num-jia">+</span></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="cakebox">
+            <div style="text-align:center;">
+                <a>
+                    <img src="img/yofr.png" class="imagesize">
+                </a>
+                <h2>優格果乾磅蛋糕</h2>
+                <div class="price_text">
+                    <b>優惠價NT$ 240</b>
+                </div>	
+            </div>
+            <div>
+                <p>嚴選進口天然奶油與原味優格，<br>
+                調和出濃郁的奶香與柔和的酸甜甘味。<br><br>
+                再拌入無花果蔓越莓與葡萄乾，<br>
+                讓水果的果酸香 氣互相激盪。</p>
+                <ul class="btn-numbox">
+                    <li><span class="number">數量</span></li>
+                    <li>
+                        <ul class="count">
+                            <li><span id="num-jian9" class="num-jian">-</span></li>
+                            <li><input type="text" class="input-num" id="input-num9" value="0" /></li>
+                            <li><span id="num-jia9" class="num-jia">+</span></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="cakebox">
+            <div style="text-align:center;">
+                <a>
+                    <img src="img/tami.jpg" class="imagesize">
+                </a>
+                <h2>芋泥鮮乳捲</h2>
+                <div class="price_text">
+                    <b>優惠價NT$ 250</b>
+                </div>	
+            </div>
+            <div>
+                <p>採用台灣在地芋頭，<br>
+                與法國isigny鮮奶油，<br>
+                可口香甜，芋泥份量十足。<br><br><br><br></p>
+                <ul class="btn-numbox">
+                    <li><span class="number">數量</span></li>
+                    <li>
+                        <ul class="count">
+                            <li><span id="num-jian10" class="num-jian">-</span></li>
+                            <li><input type="text" class="input-num" id="input-num10" value="0" /></li>
+                            <li><span id="num-jia10" class="num-jia">+</span></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="cakebox">
+            <div style="text-align:center;">
+                <a>
+                    <img src="img/bro1.jpg" class="imagesize">
+                </a>
+                <h2>布朗尼蛋糕(25入)</h2>
+                <div class="price_text">
+                    <b>優惠價NT$ 300</b>
+                </div>	
+            </div>
+            <div>
+                <p>採用濃郁<br>
+                百樂嘉利寶(Barry Callebaut)60%調溫巧克力，<br>
+                香甜的滋味令人垂涎。<br>
+                天然無鹽奶油製作的黑巧克力餅乾，<br>
+                襯托出布朗尼的味覺享受!</p>
+                <ul class="btn-numbox">
+                    <li><span class="number">數量</span></li>
+                    <li>
+                        <ul class="count">
+                            <li><span id="num-jian11" class="num-jian">-</span></li>
+                            <li><input type="text" class="input-num" id="input-num11" value="0" /></li>
+                            <li><span id="num-jia11" class="num-jia">+</span></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="cakebox">
+            <div style="text-align:center;">
+                <a>
+                    <img src="img/puff1.jpg" class="imagesize">
+                </a>
+                <h2>鮮奶泡芙(20入)</h2>
+                <div class="price_text">
+                    <b>優惠價NT$ 240</b>
+                </div>	
+            </div>
+            <div>
+                <p>夢幻般香脆波羅外衣，<br>
+                包覆著純鮮奶的頂級克林姆內餡，<br><br>
+                熬煉過程絕不添加一滴水，<br>
+                濃郁乳香自然生成更增爽口。<br><br></p>
+                <ul class="btn-numbox">
+                    <li><span class="number">數量</span></li>
+                    <li>
+                        <ul class="count">
+                            <li><span id="num-jian12" class="num-jian">-</span></li>
+                            <li><input type="text" class="input-num" id="input-num12" value="0" /></li>
+                            <li><span id="num-jia12" class="num-jia">+</span></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+            
+            <div class="book">
+                <div class="bookpos">
+                    <p class="bookword" id="orderBtn">預訂蛋糕</p>
+                </div>
+            </div>
+    </div>
+		<!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p> &copy; Bonjour朋廚 All right reserved</p>
+                    </div>
+                    <div class="col-md-4">
+                    </div>
+                    <div class="col-md-2">
+                        <a href='https://www.instagram.com/bonjourmylife/?hl=zh-tw'> <img src='img/icon_instagram.png'></a>
+                        <a href='https://www.facebook.com/bonjour1999/'> <img src='img/icon_facebook.png'></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- JS連結 -->
+	<script src="js/jQuery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-storage.js"></script>
+    <script>
+      var firebaseConfig = {
+        apiKey: "AIzaSyBjuhnFu1zzWGRsSwKXh-bZiQzsRiUD18c",
+        authDomain: "htmlfinal-e0d6e.firebaseapp.com",
+        databaseURL: "https://htmlfinal-e0d6e.firebaseio.com",
+        projectId: "htmlfinal-e0d6e",
+        storageBucket: "htmlfinal-e0d6e.appspot.com",
+        messagingSenderId: "53668605105",
+        appId: "1:53668605105:web:a0e168d76ad9e73666c690",
+        measurementId: "G-LHK89WKWWZ"
+      };
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
+    <script src="js/modal.js"></script>
+    <script src="js/order.js"></script>
+    
+	</body>
+</html>

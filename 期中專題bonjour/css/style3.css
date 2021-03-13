@@ -1,0 +1,171 @@
+
+.body{
+    margin: auto;
+    font-family: Arial, "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "Microsoft JhengHei", "맑은 고딕", sans-serif;
+  }
+
+.bg{
+    background-color: #f5f0db;
+  }
+
+.header{
+    position: fixed;
+    display: flex;
+    width: 100%;
+
+    height: 72px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    background-size: cover;
+    background-color:#AD5A5A;
+    z-index: 10;
+    padding: 0.1%;
+  }
+
+.title{
+    width: 60%;
+  }
+
+.title_img{
+    width: 130%;
+    max-width: 270px;
+    margin-top: 1.5%;
+    margin-left: 15%;
+}
+
+  .header_right{
+    min-width: 20%;
+    display: flex;
+    flex-direction: column;
+
+    margin-left: 10%;
+}
+/*header field*/
+.header2{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+    height: 72px;
+    background-size: cover;
+    background-color:#AD5A5A;
+    z-index: 10;
+    padding: 0.1%;
+  }
+
+
+.nav{
+    margin-top: 8px;
+  }
+
+.nav_box{
+    margin-right: 200px;
+    padding: 0px;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    border-radius: 3px;
+  }
+  .nav_item{
+    list-style: none;
+  }
+  .nav_item_link{
+    display: block;
+    text-decoration: none;
+    font-family: Arial, "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "Microsoft JhengHei", "맑은 고딕", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 16px 20px;
+    letter-spacing: normal;
+    text-align: left;
+    color: #edf2c5;
+  }
+  .nav_item:hover{
+      background-color: firebrick;
+  }
+
+.starter{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 200%;
+    top: 72px;
+    left: 0px;
+    justify-content: flex-start;
+    align-items: center;
+    padding-bottom: 0%;
+    text-align:center;
+}
+
+.blackline{
+    width:700px;
+    height:1.5px;
+    background-color: black;
+}
+
+.cakebox{
+    background-color: white;
+    height: 450px;
+    width:300px;
+    padding:15px;
+    margin-bottom: 30px;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+}
+
+.contenttext {
+    font-size:16px;
+    text-align:center;
+}
+
+.imagesize {
+    width:236px;
+    height:161px;
+}
+
+.book{
+    margin-top: 30px;
+    width:100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+#footer{
+  background-color: #272727;
+  width: 100%;
+  height: 150px;
+  margin-top:100px;
+}
+.icon{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-top: 50px;
+  min-width:30px;
+  width: auto;
+}
+.imgicon{
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 30px;
+  max-height: 30px;
+}
+.copyright{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color:white;   
+}
